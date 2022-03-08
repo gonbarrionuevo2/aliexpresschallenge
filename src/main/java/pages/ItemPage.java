@@ -1,4 +1,4 @@
-package com.aliexpress.pages;
+package pages;
 
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -16,13 +16,13 @@ public class ItemPage {
         wait = new WebDriverWait(driver, 20);
         wait.until(ExpectedConditions.urlContains("item"));
         this.driver = driver;
-        PageFactory.initElements(driver,this);
+        PageFactory.initElements(driver, this);
     }
 
     @FindBy(className = "product-quantity-tip")
     WebElement unitsAvailable;
 
-    public int getUnitsAvailable(){
+    public int getUnitsAvailable() {
         String quantityUnitsAvailable = unitsAvailable.getText().split(" ")[0];
         System.out.println("La cantidad disponibles es de: " + quantityUnitsAvailable);
         return Integer.parseInt(quantityUnitsAvailable);

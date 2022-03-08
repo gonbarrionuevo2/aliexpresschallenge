@@ -1,5 +1,6 @@
-package com.aliexpress.pages;
+package pages;
 
+import com.aliexpress.Base;
 import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
@@ -11,20 +12,18 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 
 import java.util.List;
 
-public class ResultsPage {
+public class ResultsPage extends Base{
 
     WebDriver driver;
     WebDriverWait wait;
 
     public ResultsPage(WebDriver driver) {
+        super();
         wait = new WebDriverWait(driver, 20);
         wait.until(ExpectedConditions.urlContains("wholesale"));
         this.driver = driver;
         PageFactory.initElements(driver, this);
     }
-
-    @FindBy(className = "list-pagination")
-    WebElement pagination;
 
     @FindBy(xpath = "//*[@id=\"root\"]/div/div/div[2]/div[2]/div/div[3]/div/div[2]/span[3]/input")
     WebElement goToPageBox;
@@ -42,8 +41,17 @@ public class ResultsPage {
         goButton.click();
     }
 
-    public List<WebElement> getProductsList() {
+    public List<WebElement> getProductsList(WebDriver driver) {
+        wait = new WebDriverWait(driver,10);
+        wait.until(ExpectedConditions.visibilityOfElementLocated(By.className("_18_85")));
         List<WebElement> productsList = driver.findElements(By.className("_18_85"));
         return productsList;
+    }
+
+    public void select2ndProduct(WebDriver driver) throws InterruptedException {
+        List<WebElement> productsList = getProductsList(driver);
+        Thread.sleep(2000);
+        scrollToElement(productsList.get(1), driver);
+        productsList.get(1).click();
     }
 }

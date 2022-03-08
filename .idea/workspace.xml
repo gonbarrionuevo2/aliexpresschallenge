@@ -6,9 +6,15 @@
   <component name="ChangeListManager">
     <list default="true" id="5404f3e8-e354-42b8-8909-d862710927f1" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/aliexpress/pages/ResultsPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/aliexpress/pages/ResultsPage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/aliexpress/pages/HomePage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pages/HomePage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/aliexpress/pages/ItemPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pages/ItemPage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/aliexpress/pages/PageObject.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/aliexpress/Base.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/aliexpress/pages/ResultsPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pages/ResultsPage.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/com/aliexpress/SearchTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/aliexpress/SearchTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/aliexpress/pages/ResultsPage.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/aliexpress/pages/ResultsPage.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/aliexpress/pages/HomePage.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/aliexpress/pages/ItemPage.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/aliexpress/pages/PageObject.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/aliexpress/pages/ResultsPage.class" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/target/test-classes/com/aliexpress/SearchTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/com/aliexpress/SearchTest.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -57,7 +63,7 @@
       <module name="aliExpressChallenge" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.aliexpress.*" />
+          <option name="PATTERN" value="pages.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
