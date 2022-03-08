@@ -26,25 +26,28 @@ public class ResultsPage {
     @FindBy(className = "list-pagination")
     WebElement pagination;
 
-    @FindBy(className = "_3t7zg _2f4Ho")
-    List<WebElement> listProducts;
+    @FindBy(xpath = "//*[@id=\"root\"]/div/div/div[2]/div[2]/div/div[3]/div/div[2]/span[3]/input")
+    WebElement goToPageBox;
 
-    public List<WebElement> getPagesList() throws InterruptedException {
+    @FindBy(className = "jump-btn")
+    WebElement goButton;
+
+    public void goToPage(String numberOfPage) throws InterruptedException {
         ((JavascriptExecutor) driver).executeScript("window.scrollTo(0, document.body.scrollHeight)");
-        Thread.sleep(2000);
-
-        scrollToElement(pagination);
-        Thread.sleep(1000);
-        List<WebElement> pagesList = pagination.findElements(By.className("next-btn"));
-        Thread.sleep(500);
-
-        return pagesList;
+        Thread.sleep(1500);
+        //scrollToElement(pagination);
+        JavascriptExecutor js = (JavascriptExecutor) driver;
+        js.executeScript("window.scrollBy(0,-500)", "");
+        Thread.sleep(1500);
+        goToPageBox.sendKeys(numberOfPage);
+        goButton.click();
     }
 
     private void scrollToElement(WebElement element){
         ((JavascriptExecutor)driver).executeScript("arguments[0].scrollIntoView(true);", element);
     }
     public List<WebElement> getProductsList() {
-        return listProducts;
+        List<WebElement>productsList = driver.findElements(By.className("_18_85"));
+        return productsList;
     }
 }
