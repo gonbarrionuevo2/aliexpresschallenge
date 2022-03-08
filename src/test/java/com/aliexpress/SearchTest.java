@@ -2,10 +2,10 @@ package com.aliexpress;
 
 import com.aliexpress.pages.HomePage;
 import com.aliexpress.pages.ItemPage;
+import com.aliexpress.pages.PageObject;
 import com.aliexpress.pages.ResultsPage;
 import io.github.bonigarcia.wdm.WebDriverManager;
 import org.openqa.selenium.By;
-import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
@@ -23,6 +23,7 @@ import static org.openqa.selenium.support.ui.ExpectedConditions.numberOfWindowsT
 public class SearchTest {
 
     WebDriver driver;
+    PageObject pageObject;
     HomePage homePage;
     ResultsPage resultsPage;
     ItemPage itemPage;
@@ -32,10 +33,11 @@ public class SearchTest {
     public void launchBrowser() {
         WebDriverManager.chromedriver().setup();
         driver = new ChromeDriver();
+
         driver.manage().window().maximize();
         driver.get("https://www.aliexpress.com");
         try{
-            wait = new WebDriverWait(driver,20);
+            wait = new WebDriverWait(driver,6);
             wait.until(ExpectedConditions.visibilityOfElementLocated(By.className("poplayer-content")));
             wait.until(ExpectedConditions.elementToBeClickable(By.className("btn-close"))).click();
         }catch (Exception e){}
@@ -51,6 +53,9 @@ public class SearchTest {
         wait.until(ExpectedConditions.urlContains("default&page=2"));
         List<WebElement> productsList = resultsPage.getProductsList();
         String originalWindow = driver.getWindowHandle();
+        Thread.sleep(2000);
+        pageObject = new PageObject(driver);
+        pageObject.scrollToElement(productsList.get(1));
         productsList.get(1).click();
         wait.until(numberOfWindowsToBe(2));
         for (String windowHandle : driver.getWindowHandles()) {

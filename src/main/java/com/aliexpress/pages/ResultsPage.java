@@ -35,7 +35,6 @@ public class ResultsPage {
     public void goToPage(String numberOfPage) throws InterruptedException {
         ((JavascriptExecutor) driver).executeScript("window.scrollTo(0, document.body.scrollHeight)");
         Thread.sleep(1500);
-        //scrollToElement(pagination);
         JavascriptExecutor js = (JavascriptExecutor) driver;
         js.executeScript("window.scrollBy(0,-500)", "");
         Thread.sleep(1500);
@@ -43,9 +42,6 @@ public class ResultsPage {
         goButton.click();
     }
 
-    /* private void scrollToElement(WebElement element){
-         ((JavascriptExecutor)driver).executeScript("arguments[0].scrollIntoView(true);", element);
-     }*/
     public List<WebElement> getProductsList() {
         List<WebElement> productsList = driver.findElements(By.className("_18_85"));
         return productsList;
