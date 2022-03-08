@@ -7,9 +7,6 @@
     <list default="true" id="5404f3e8-e354-42b8-8909-d862710927f1" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/aliexpress/pages/ResultsPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/aliexpress/pages/ResultsPage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/aliexpress/SearchTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/aliexpress/SearchTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/aliexpress/pages/ResultsPage.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/aliexpress/pages/ResultsPage.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/com/aliexpress/SearchTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/com/aliexpress/SearchTest.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -98,21 +95,5 @@
         </entry>
       </map>
     </option>
-  </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/test/java/com/aliexpress/SearchTest.java</url>
-          <line>39</line>
-          <option name="timeStamp" value="14" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/com/aliexpress/pages/ResultsPage.java</url>
-          <line>39</line>
-          <option name="timeStamp" value="16" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
   </component>
 </project>

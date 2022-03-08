@@ -4,6 +4,7 @@ import com.aliexpress.pages.HomePage;
 import com.aliexpress.pages.ItemPage;
 import com.aliexpress.pages.ResultsPage;
 import io.github.bonigarcia.wdm.WebDriverManager;
+import org.openqa.selenium.By;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -33,6 +34,11 @@ public class SearchTest {
         driver = new ChromeDriver();
         driver.manage().window().maximize();
         driver.get("https://www.aliexpress.com");
+        try{
+            wait = new WebDriverWait(driver,20);
+            wait.until(ExpectedConditions.visibilityOfElementLocated(By.className("poplayer-content")));
+            wait.until(ExpectedConditions.elementToBeClickable(By.className("btn-close"))).click();
+        }catch (Exception e){}
     }
 
     @Test

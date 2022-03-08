@@ -43,11 +43,11 @@ public class ResultsPage {
         goButton.click();
     }
 
-    private void scrollToElement(WebElement element){
-        ((JavascriptExecutor)driver).executeScript("arguments[0].scrollIntoView(true);", element);
-    }
+    /* private void scrollToElement(WebElement element){
+         ((JavascriptExecutor)driver).executeScript("arguments[0].scrollIntoView(true);", element);
+     }*/
     public List<WebElement> getProductsList() {
-        List<WebElement>productsList = driver.findElements(By.className("_18_85"));
+        List<WebElement> productsList = driver.findElements(By.className("_18_85"));
         return productsList;
     }
 }
