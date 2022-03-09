@@ -1,4 +1,4 @@
-package pages;
+package webPages;
 
 import com.aliexpress.Base;
 import org.openqa.selenium.By;
@@ -53,5 +53,14 @@ public class ResultsPage extends Base{
         Thread.sleep(2000);
         scrollToElement(productsList.get(1), driver);
         productsList.get(1).click();
+    }
+
+    //MOBILE
+
+    public void select2ndProductMobile(WebDriver driver){
+        wait = new WebDriverWait(driver,10);
+        WebElement rightSide = wait.until(ExpectedConditions.visibilityOfElementLocated(By.className("ivdeu")));
+        List<WebElement> listProducts = rightSide.findElements(By.className("_3t7zg"));
+        listProducts.get(0).click();
     }
 }

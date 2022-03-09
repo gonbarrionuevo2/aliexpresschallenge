@@ -6,15 +6,16 @@
   <component name="ChangeListManager">
     <list default="true" id="5404f3e8-e354-42b8-8909-d862710927f1" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/aliexpress/pages/HomePage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pages/HomePage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/aliexpress/pages/ItemPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pages/ItemPage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/aliexpress/pages/PageObject.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/aliexpress/Base.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/aliexpress/pages/ResultsPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pages/ResultsPage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/aliexpress/Base.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/aliexpress/Base.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/pages/HomePage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/webPages/HomePage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/pages/ItemPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/webPages/ItemPage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/pages/ResultsPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/webPages/ResultsPage.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/com/aliexpress/SearchTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/aliexpress/SearchTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/aliexpress/pages/HomePage.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/aliexpress/pages/ItemPage.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/aliexpress/pages/PageObject.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/aliexpress/pages/ResultsPage.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/aliexpress/Base.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/aliexpress/Base.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/pages/HomePage.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/pages/ItemPage.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/pages/ResultsPage.class" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/target/test-classes/com/aliexpress/SearchTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/com/aliexpress/SearchTest.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -32,6 +33,14 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
+  <component name="GitSEFilterConfiguration">
+    <file-type-list>
+      <filtered-out-file-type name="LOCAL_BRANCH" />
+      <filtered-out-file-type name="REMOTE_BRANCH" />
+      <filtered-out-file-type name="TAG" />
+      <filtered-out-file-type name="COMMIT_BY_MESSAGE" />
+    </file-type-list>
+  </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
   </component>
@@ -45,7 +54,7 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../Assist Card QA/portal-agencias" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="project.structure.last.edited" value="Problems" />
     <property name="project.structure.proportion" value="0.0" />
     <property name="project.structure.side.proportion" value="0.25859246" />
@@ -58,12 +67,76 @@
       <recent name="C:\Users\gonzalo.Barrionuevo\Desktop\challengeAliExpress\challenge\src\main\java" />
     </key>
   </component>
-  <component name="RunManager">
+  <component name="RunManager" selected="TestNG.C:/Users/gonzalo.Barrionuevo/Desktop/aliExpressChallenge/testng.xml">
+    <configuration name="C:/Users/gonzalo.Barrionuevo/Desktop/aliExpressChallenge/testng.xml" type="TestNG" temporary="true" nameIsGenerated="true">
+      <module name="aliExpressChallenge" />
+      <option name="SUITE_NAME" value="$PROJECT_DIR$/testng.xml" />
+      <option name="TEST_OBJECT" value="SUITE" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="MobileTest.validateResponsive" type="TestNG" temporary="true" nameIsGenerated="true">
+      <module name="aliExpressChallenge" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.aliexpress.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.aliexpress" />
+      <option name="MAIN_CLASS_NAME" value="com.aliexpress.MobileTest" />
+      <option name="METHOD_NAME" value="validateResponsive" />
+      <option name="TEST_OBJECT" value="METHOD" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ResponsiveBasic.validateResponsive" type="TestNG" temporary="true" nameIsGenerated="true">
+      <module name="aliExpressChallenge" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.aliexpress.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.aliexpress" />
+      <option name="MAIN_CLASS_NAME" value="com.aliexpress.ResponsiveBasic" />
+      <option name="METHOD_NAME" value="validateResponsive" />
+      <option name="TEST_OBJECT" value="METHOD" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="SearchResponsiveTest.searchIphone" type="TestNG" temporary="true" nameIsGenerated="true">
+      <module name="aliExpressChallenge" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.aliexpress.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.aliexpress" />
+      <option name="MAIN_CLASS_NAME" value="com.aliexpress.SearchResponsiveTest" />
+      <option name="METHOD_NAME" value="searchIphone" />
+      <option name="TEST_OBJECT" value="METHOD" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="SearchTest.searchIphone" type="TestNG" temporary="true" nameIsGenerated="true">
       <module name="aliExpressChallenge" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="pages.*" />
+          <option name="PATTERN" value="webPages.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -79,7 +152,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="TestNG.C:/Users/gonzalo.Barrionuevo/Desktop/aliExpressChallenge/testng.xml" />
+        <item itemvalue="TestNG.MobileTest.validateResponsive" />
+        <item itemvalue="TestNG.ResponsiveBasic.validateResponsive" />
         <item itemvalue="TestNG.SearchTest.searchIphone" />
+        <item itemvalue="TestNG.SearchResponsiveTest.searchIphone" />
       </list>
     </recent_temporary>
   </component>
