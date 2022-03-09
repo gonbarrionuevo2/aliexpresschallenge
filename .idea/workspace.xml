@@ -5,18 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="5404f3e8-e354-42b8-8909-d862710927f1" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/aliexpress/Base.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/aliexpress/Base.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/pages/HomePage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/webPages/HomePage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/pages/ItemPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/webPages/ItemPage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/pages/ResultsPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/webPages/ResultsPage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/aliexpress/SearchTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/aliexpress/SearchTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/aliexpress/Base.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/aliexpress/Base.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/pages/HomePage.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/pages/ItemPage.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/pages/ResultsPage.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/com/aliexpress/SearchTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/com/aliexpress/SearchTest.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/aliexpress/SearchTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/aliexpress/DesktopTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/testng.xml" beforeDir="false" afterPath="$PROJECT_DIR$/runTests.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -78,6 +68,24 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="DesktopTest.searchIphone" type="TestNG" temporary="true" nameIsGenerated="true">
+      <module name="aliExpressChallenge" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="webPages.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.aliexpress" />
+      <option name="MAIN_CLASS_NAME" value="com.aliexpress.DesktopTest" />
+      <option name="METHOD_NAME" value="searchIphone" />
+      <option name="TEST_OBJECT" value="METHOD" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="MobileTest.validateResponsive" type="TestNG" temporary="true" nameIsGenerated="true">
       <module name="aliExpressChallenge" />
       <extension name="coverage">
@@ -132,30 +140,12 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="SearchTest.searchIphone" type="TestNG" temporary="true" nameIsGenerated="true">
-      <module name="aliExpressChallenge" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="webPages.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="com.aliexpress" />
-      <option name="MAIN_CLASS_NAME" value="com.aliexpress.SearchTest" />
-      <option name="METHOD_NAME" value="searchIphone" />
-      <option name="TEST_OBJECT" value="METHOD" />
-      <properties />
-      <listeners />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <recent_temporary>
       <list>
         <item itemvalue="TestNG.C:/Users/gonzalo.Barrionuevo/Desktop/aliExpressChallenge/testng.xml" />
         <item itemvalue="TestNG.MobileTest.validateResponsive" />
         <item itemvalue="TestNG.ResponsiveBasic.validateResponsive" />
-        <item itemvalue="TestNG.SearchTest.searchIphone" />
+        <item itemvalue="TestNG.DesktopTest.searchIphone" />
         <item itemvalue="TestNG.SearchResponsiveTest.searchIphone" />
       </list>
     </recent_temporary>

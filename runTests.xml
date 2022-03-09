@@ -8,7 +8,7 @@
                     <include name="validateResponsive"/>
                 </methods>
             </class>
-            <class name="com.aliexpress.SearchTest">
+            <class name="com.aliexpress.DesktopTest">
                 <methods>
                     <include name="searchIphone"/>
                 </methods>

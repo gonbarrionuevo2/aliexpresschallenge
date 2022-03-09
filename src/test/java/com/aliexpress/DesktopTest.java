@@ -13,7 +13,7 @@ import webPages.ResultsPage;
 
 import static org.openqa.selenium.support.ui.ExpectedConditions.numberOfWindowsToBe;
 
-public class SearchTest {
+public class DesktopTest {
 
     WebDriver driver;
     Base base;
