@@ -11,7 +11,7 @@ import webPages.ResultsPage;
 public class MobileTest {
 
     WebDriver driver;
-    Base base;
+    Page base;
     HomePage homePage;
     ResultsPage resultsPage;
     ItemPage itemPage;
@@ -29,8 +29,7 @@ public class MobileTest {
 
     @Test(dataProvider = "mobileEmulations")
     public void validateResponsive(String emulation, int w, int h) {
-        base = new Base();
-        this.driver = base.newMobileWithDimensions(emulation,w,h);
+        this.driver = Page.newMobileWithDimensions(emulation,w,h);
         driver.get("https://www.aliexpress.com");
         wait = new WebDriverWait(driver, 20);
         homePage = new HomePage(driver);
@@ -39,7 +38,7 @@ public class MobileTest {
         resultsPage = new ResultsPage(driver);
         resultsPage.select2ndProductMobile(driver);
         itemPage = new ItemPage(driver);
-        Assert.assertTrue(itemPage.getUnitsAvailableMobile() > 1);
+        Assert.assertTrue(itemPage.getUnitsAvailableMobile() >= 1);
     }
 
     @AfterMethod

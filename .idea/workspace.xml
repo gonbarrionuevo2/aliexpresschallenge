@@ -5,8 +5,23 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="5404f3e8-e354-42b8-8909-d862710927f1" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/aliexpress/SearchTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/aliexpress/DesktopTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/testng.xml" beforeDir="false" afterPath="$PROJECT_DIR$/runTests.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__log4j_log4j_1_2_17.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/aliexpress/Page.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/aliExpressChallenge.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/aliExpressChallenge.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/aliexpress/Base.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/webPages/HomePage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/webPages/HomePage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/webPages/ItemPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/webPages/ItemPage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/webPages/ResultsPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/webPages/ResultsPage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/aliexpress/DesktopTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/aliexpress/DesktopTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/aliexpress/MobileTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/aliexpress/MobileTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/aliexpress/Base.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/webPages/HomePage.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/webPages/HomePage.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/webPages/ItemPage.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/webPages/ItemPage.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/webPages/ResultsPage.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/webPages/ResultsPage.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/com/aliexpress/MobileTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/com/aliexpress/MobileTest.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/com/aliexpress/SearchTest.class" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -48,6 +63,7 @@
     <property name="project.structure.last.edited" value="Problems" />
     <property name="project.structure.proportion" value="0.0" />
     <property name="project.structure.side.proportion" value="0.25859246" />
+    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
@@ -57,7 +73,17 @@
       <recent name="C:\Users\gonzalo.Barrionuevo\Desktop\challengeAliExpress\challenge\src\main\java" />
     </key>
   </component>
-  <component name="RunManager" selected="TestNG.C:/Users/gonzalo.Barrionuevo/Desktop/aliExpressChallenge/testng.xml">
+  <component name="RunManager" selected="TestNG.DesktopTest.searchIphone">
+    <configuration name="C:/Users/gonzalo.Barrionuevo/Desktop/aliExpressChallenge/runTests.xml" type="TestNG" temporary="true" nameIsGenerated="true">
+      <module name="aliExpressChallenge" />
+      <option name="SUITE_NAME" value="$PROJECT_DIR$/runTests.xml" />
+      <option name="TEST_OBJECT" value="SUITE" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="C:/Users/gonzalo.Barrionuevo/Desktop/aliExpressChallenge/testng.xml" type="TestNG" temporary="true" nameIsGenerated="true">
       <module name="aliExpressChallenge" />
       <option name="SUITE_NAME" value="$PROJECT_DIR$/testng.xml" />
@@ -122,31 +148,13 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="SearchResponsiveTest.searchIphone" type="TestNG" temporary="true" nameIsGenerated="true">
-      <module name="aliExpressChallenge" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.aliexpress.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="com.aliexpress" />
-      <option name="MAIN_CLASS_NAME" value="com.aliexpress.SearchResponsiveTest" />
-      <option name="METHOD_NAME" value="searchIphone" />
-      <option name="TEST_OBJECT" value="METHOD" />
-      <properties />
-      <listeners />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="TestNG.C:/Users/gonzalo.Barrionuevo/Desktop/aliExpressChallenge/testng.xml" />
-        <item itemvalue="TestNG.MobileTest.validateResponsive" />
         <item itemvalue="TestNG.ResponsiveBasic.validateResponsive" />
+        <item itemvalue="TestNG.MobileTest.validateResponsive" />
         <item itemvalue="TestNG.DesktopTest.searchIphone" />
-        <item itemvalue="TestNG.SearchResponsiveTest.searchIphone" />
+        <item itemvalue="TestNG.C:/Users/gonzalo.Barrionuevo/Desktop/aliExpressChallenge/testng.xml" />
+        <item itemvalue="TestNG.C:/Users/gonzalo.Barrionuevo/Desktop/aliExpressChallenge/runTests.xml" />
       </list>
     </recent_temporary>
   </component>

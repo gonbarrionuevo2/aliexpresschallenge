@@ -1,6 +1,6 @@
 package webPages;
 
-import com.aliexpress.Base;
+import com.aliexpress.Page;
 import org.openqa.selenium.By;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
@@ -10,15 +10,13 @@ import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
-public class HomePage extends Base {
+public class HomePage extends Page {
 
-    WebDriver driver;
     WebDriverWait wait;
+    private static String URL = "https://es.aliexpress.com/";
 
     public HomePage(WebDriver driver) {
-        wait = new WebDriverWait(driver, 20);
-        wait.until(ExpectedConditions.urlContains("aliexpress.com/"));
-        this.driver = driver;
+        super(driver);
         PageFactory.initElements(driver, this);
     }
 
@@ -31,27 +29,39 @@ public class HomePage extends Base {
     @FindBy(className = "btn-close")
     WebElement btnCloseModal;
 
-    public void ifModalExistCloseIt() {
-        try {
-            wait = new WebDriverWait(driver, 5);
-            wait.until(ExpectedConditions.visibilityOfElementLocated(By.className("poplayer-content")));
-            wait.until(ExpectedConditions.elementToBeClickable(btnCloseModal)).click();
-        } catch (Exception e) {
-        }
-    }
+    @FindBy(className = "poplayer-content")
+    WebElement modalDesktop;
+
+    @FindBy(className = "coupon-poplayer-modal")
+    WebElement modalMobile;
+
 
     public void search(String text) {
+        waitUntilIsVisible(searchbox,5);
         searchbox.sendKeys(text);
         searchButton.click();
+    }
+
+    public void goToURL(){
+        goTo(URL);
+    }
+
+    public void ifModalExistCloseIt() {
+        try {
+            waitUntilIsVisible(modalDesktop,6);
+            waitUntilItsClickable(btnCloseModal,3);
+            btnCloseModal.click();
+        } catch (Exception e) {
+        }
     }
 
 
     //MOBILE
     public void ifCouponExistCloseIt(){
         try{
-            wait = new WebDriverWait(driver, 5);
-            wait.until(ExpectedConditions.visibilityOfElementLocated(By.className("coupon-poplayer-modal")));
-            wait.until(ExpectedConditions.elementToBeClickable(btnCloseModal)).click();
+            waitUntilIsVisible(modalMobile,6);
+            waitUntilItsClickable(btnCloseModal,3);
+            btnCloseModal.click();
         }catch (Exception e){}
     }
 

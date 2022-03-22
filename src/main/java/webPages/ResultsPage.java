@@ -1,8 +1,7 @@
 package webPages;
 
-import com.aliexpress.Base;
+import com.aliexpress.Page;
 import org.openqa.selenium.By;
-import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
@@ -12,16 +11,13 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 
 import java.util.List;
 
-public class ResultsPage extends Base{
+public class ResultsPage extends Page {
 
-    WebDriver driver;
     WebDriverWait wait;
+    public static String URL = "";
 
     public ResultsPage(WebDriver driver) {
-        super();
-        wait = new WebDriverWait(driver, 20);
-        wait.until(ExpectedConditions.urlContains("wholesale"));
-        this.driver = driver;
+        super(driver);
         PageFactory.initElements(driver, this);
     }
 
@@ -31,28 +27,29 @@ public class ResultsPage extends Base{
     @FindBy(className = "jump-btn")
     WebElement goButton;
 
-    public void goToPage(String numberOfPage) throws InterruptedException {
-        ((JavascriptExecutor) driver).executeScript("window.scrollTo(0, document.body.scrollHeight)");
-        Thread.sleep(1500);
-        JavascriptExecutor js = (JavascriptExecutor) driver;
-        js.executeScript("window.scrollBy(0,-500)", "");
-        Thread.sleep(1500);
-        goToPageBox.sendKeys(numberOfPage);
+    @FindBy(className = "_18_85")
+    WebElement product;
+
+    public void goToPage(int numberOfPage){
+        scrollToElement(goToPageBox);
+        waitUntilIsVisible(goToPageBox,5);
+        goToPageBox.sendKeys(Integer.toString(numberOfPage));
         goButton.click();
+        waitUntilUrlContains("default&page="+numberOfPage);
     }
 
-    public List<WebElement> getProductsList(WebDriver driver) {
-        wait = new WebDriverWait(driver,10);
-        wait.until(ExpectedConditions.visibilityOfElementLocated(By.className("_18_85")));
-        List<WebElement> productsList = driver.findElements(By.className("_18_85"));
+    public List<WebElement> getProductsList() {
+        waitUntilIsVisible(product,5);
+        List<WebElement> productsList = findElements(By.className("_18_85"));
         return productsList;
     }
 
-    public void select2ndProduct(WebDriver driver) throws InterruptedException {
-        List<WebElement> productsList = getProductsList(driver);
-        Thread.sleep(2000);
-        scrollToElement(productsList.get(1), driver);
-        productsList.get(1).click();
+    public void selectProductNumber(int number){
+        String originalWindow = getCurrentTab();
+        List<WebElement> productsList = getProductsList();
+        scrollToElement(productsList.get(number-1));
+        productsList.get(number-1).click();
+        switchToAnotherTab(originalWindow);
     }
 
     //MOBILE
