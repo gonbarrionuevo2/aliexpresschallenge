@@ -18,7 +18,7 @@ public class DesktopTest {
     ItemPage itemPage;
 
     @BeforeMethod
-    public void launchBrowser() {
+    public void init() {
         WebDriver driver = Page.chromeDriverConnection();
         homePage = new HomePage(driver);
         resultsPage = new ResultsPage(driver);

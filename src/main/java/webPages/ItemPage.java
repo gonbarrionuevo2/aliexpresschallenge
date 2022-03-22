@@ -7,14 +7,10 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
-import org.openqa.selenium.support.ui.ExpectedConditions;
-import org.openqa.selenium.support.ui.WebDriverWait;
 
 @Log4j
 public class ItemPage extends Page {
 
-    WebDriver driver;
-    WebDriverWait wait;
 
     public ItemPage(WebDriver driver) {
         super(driver);
@@ -34,10 +30,8 @@ public class ItemPage extends Page {
 
     //MOBILE
     public int getUnitsAvailableMobile(){
-        wait = new WebDriverWait(driver,10);
-        wait.until(ExpectedConditions.visibilityOfElementLocated(By.className("rate-info--num--H6GDxkh")));
+        waitUntilIsVisible(unitsAvailableMobile,5);
         String quantityUnitsAvailable = unitsAvailableMobile.getText().split(" ")[2];
-        System.out.println("La cantidad disponibles es de: " + quantityUnitsAvailable);
         return Integer.parseInt(quantityUnitsAvailable);
     }
 }

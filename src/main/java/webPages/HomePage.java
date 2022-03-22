@@ -35,6 +35,13 @@ public class HomePage extends Page {
     @FindBy(className = "coupon-poplayer-modal")
     WebElement modalMobile;
 
+    @FindBy(className = "_3Fb4x")
+    WebElement box;
+
+    By inputBox = By.xpath("//*[@id='header']/div/div[2]/div[2]/input");
+
+    @FindBy(className = "_3vN3V")
+    WebElement searchEnabled;
 
     public void search(String text) {
         waitUntilIsVisible(searchbox,5);
@@ -65,12 +72,9 @@ public class HomePage extends Page {
         }catch (Exception e){}
     }
 
-    public void searchMobile(String text, WebDriver driver){
-        wait = new WebDriverWait(driver,10);
-        WebElement box = driver.findElement(By.className("_3Fb4x"));
-        box.findElement(By.xpath("//*[@id='header']/div/div[2]/div[2]/input")).click();
-
-        WebElement searchEnabled = wait.until(ExpectedConditions.visibilityOfElementLocated(By.className("_3vN3V")));
+    public void searchMobile(String text){
+        box.findElement(inputBox).click();
+        waitUntilIsVisible(searchEnabled,5);
         if(searchEnabled.isEnabled()){
             searchEnabled.sendKeys(text);
             searchEnabled.sendKeys(Keys.ENTER);

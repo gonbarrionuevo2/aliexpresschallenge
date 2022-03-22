@@ -1,1 +1,2 @@
 INFO    2022-03-22 16:57:58,709 [main] com.aliexpress.DesktopTest  - Expected units to be greater or equal than 1: 460
+INFO    2022-03-22 17:48:11,538 [main] com.aliexpress.MobileTest  - Mobile - Expected units to be greater or equal than 1: 332

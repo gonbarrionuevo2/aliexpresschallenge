@@ -1,5 +1,6 @@
 package com.aliexpress;
 
+import lombok.extern.log4j.Log4j;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
@@ -8,14 +9,12 @@ import webPages.HomePage;
 import webPages.ItemPage;
 import webPages.ResultsPage;
 
+@Log4j
 public class MobileTest {
 
-    WebDriver driver;
-    Page base;
     HomePage homePage;
     ResultsPage resultsPage;
     ItemPage itemPage;
-    WebDriverWait wait;
 
     @DataProvider
     public Object[][] mobileEmulations() {
@@ -29,22 +28,23 @@ public class MobileTest {
 
     @Test(dataProvider = "mobileEmulations")
     public void validateResponsive(String emulation, int w, int h) {
-        this.driver = Page.newMobileWithDimensions(emulation,w,h);
-        driver.get("https://www.aliexpress.com");
-        wait = new WebDriverWait(driver, 20);
+        WebDriver driver = Page.newMobileWithDimensions(emulation,w,h);
+        homePage = new HomePage(driver);
+        resultsPage = new ResultsPage(driver);
+        itemPage = new ItemPage(driver);
+        homePage.goToURL();
         homePage = new HomePage(driver);
         homePage.ifCouponExistCloseIt();
-        homePage.searchMobile("Iphone",driver);
+        homePage.searchMobile("Iphone");
         resultsPage = new ResultsPage(driver);
         resultsPage.select2ndProductMobile(driver);
         itemPage = new ItemPage(driver);
+        log.info("Mobile - Expected units to be greater or equal than 1: " + itemPage.getUnitsAvailableMobile());
         Assert.assertTrue(itemPage.getUnitsAvailableMobile() >= 1);
     }
 
     @AfterMethod
     public void quit() {
-        if (driver != null) {
-            driver.quit();
-        }
+        itemPage.quitDriver();
     }
 }
